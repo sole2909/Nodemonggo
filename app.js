@@ -78,6 +78,8 @@ app.post('/doInsert', async (req, res) => {
     res.redirect('/')
 })
 
+
+
 app.listen(3000);
 console.log('server is running at 3000')
 
