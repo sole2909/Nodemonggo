@@ -7,15 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update product</title>
 </head>
+<style>
+    #new {
+        padding: 0px;
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 260px;
+
+    }
+
+    #name {
+        width: 200px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        display: block;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    #add {
+        width: 210px;
+        margin: 0px;
+        line: 8px;
+        padding: 0px;
+        font: optional;
+        text-align: center;
+        background-color: aquamarine;
+    }
+</style>
 
 <body>
-    <h1>Update product</h1>
-    <form action="/update" method="post">
-        <input type="hidden" name="txtId" value="{{product._id}}">
-        Name <input type="text" name="txtName" value="{{product.name}}" />
+
+    <form action="/update" method="post" id="new">
+        <h1>Update product</h1>
+        <input type="hidden" name="txtId" value="{{product._id}}" placeholder="Tên sản phẩm" / id="name">
+        <input type="text" name="txtName" value="{{product.name}}" placeholder="Tên sản phẩm" / id="name">
         <br>
-        Price <input type="text" name="txtPrice" value="{{product.price}}" />
-        <input type="submit" value="Update">
+        <input type="text" name="txtPrice" value="{{product.price}}" placeholder="price sản phẩm" / id="name">
+        <br>
+        <input type="text" name="txtProductcode" value="{{product.productcode}}" placeholder="id sản phẩm" / id="name">
+        <br>
+        <input type="text" name="txtColor" value="{{product.color}}" placeholder="color sản phẩm" / id="name">
+        <br>
+        <input type="submit" value="Update" id="add">
 
     </form>
 </body>

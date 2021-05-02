@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New product</title>
 </head>
+
+<style>
+    #new {
+        padding: 0px;
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 260px;
+
+    }
+
+    #name {
+        width: 200px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        display: block;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    #add {
+        width: 210px;
+        margin: 0px;
+        padding: 0px;
+        font: optional;
+        text-align: center;
+        background-color: aquamarine;
+    }
+</style>
+
 <body>
-<form action="/doInsert" method="post">
-        Name <input type="text" name="txtName"/>
+    <div id="new">
+        <h2 style="margin-left: 20px">Add new product</h2>
+        <form action="/doInsert" method="post">
+            <input type="text" name="txtName" placeholder="Product name" / id="name">
+            <br>
+            <input type="text" name="txtPrice" placeholder="Product price" / id="name">
+            <br>
+            <input type="text" name="txtProductcode" placeholder="Product id" / id="name">
+            <br>
+            <input type="text" name="txtColor" placeholder="Product color" / id="name">
+            <br>
 
-        <br>       
+            <input type="submit" value="Add" id="add">
+        </form>
+    </div>
 
-        Price <input type="text" name="txtPrice"/>
-
-        <input type="submit" value="Insert">
-
-    </form>
 </body>
-</html>
 
+</html>
